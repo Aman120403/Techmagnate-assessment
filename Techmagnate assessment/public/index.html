@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tech Magnate Assessment — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/dashboard.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <div>
+          <h1>Tech Magnate Assessment</h1>
+          <p class="tagline">DataForSEO SERP task pipeline</p>
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <span id="queueBadge" class="queue-badge" title="Queue status">queue idle</span>
+        <button type="button" class="btn btn-ghost" id="btnRefresh">Refresh</button>
+        <button type="button" class="btn btn-primary" id="btnOpenCreate">New task</button>
+        <button type="button" class="btn btn-secondary" id="btnOpenBulk">Bulk CSV</button>
+      </div>
+    </header>
+
+    <section class="toolbar" aria-label="Filters">
+      <div class="search-wrap">
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search keyword or task id…"
+          autocomplete="off"
+        />
+      </div>
+
+      <select id="filterStatus" aria-label="Status">
+        <option value="">All statuses</option>
+        <option value="queued">Queued</option>
+        <option value="processing">Processing</option>
+        <option value="success">Success</option>
+        <option value="failed">Failed</option>
+      </select>
+
+      <select id="filterPriority" aria-label="Priority">
+        <option value="">All priorities</option>
+        <option value="1">Priority 1</option>
+        <option value="2">Priority 2</option>
+      </select>
+
+      <input type="text" id="filterLanguage" placeholder="Lang (en)" maxlength="10" />
+      <input type="text" id="filterLocation" placeholder="Location code" inputmode="numeric" />
+
+      <div class="columns-menu">
+        <button type="button" class="btn btn-ghost" id="btnColumns">Columns</button>
+        <div id="columnsPanel" class="columns-panel hidden" role="menu"></div>
+      </div>
+    </section>
+
+    <main class="table-shell">
+      <div class="table-scroll">
+        <table id="tasksTable">
+          <thead>
+            <tr id="theadRow"></tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+      <div id="emptyState" class="empty hidden">No tasks match these filters.</div>
+      <div id="loadingState" class="loading">Loading…</div>
+    </main>
+
+    <footer class="pager">
+      <div class="pager-meta">
+        <span id="pageMeta">—</span>
+        <label class="limit-label">
+          Rows
+          <select id="pageLimit">
+            <option value="10">10</option>
+            <option value="20" selected>20</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
+        </label>
+      </div>
+      <div class="pager-btns">
+        <button type="button" class="btn btn-ghost" id="btnPrev" disabled>Prev</button>
+        <button type="button" class="btn btn-ghost" id="btnNext" disabled>Next</button>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Create single -->
+  <dialog id="createDialog" class="modal">
+    <form method="dialog" id="createForm">
+      <header>
+        <h2>Create task</h2>
+        <button type="button" class="icon-close" data-close="createDialog" aria-label="Close">&times;</button>
+      </header>
+      <div class="form-grid">
+        <label>Keyword *<input name="keyword" required maxlength="700" placeholder="react developer" /></label>
+        <label>Language *<input name="language" required placeholder="en" value="en" /></label>
+        <label>Location *<input name="location" required inputmode="numeric" placeholder="2840" value="2840" /></label>
+        <label>Priority *
+          <select name="priority" required>
+            <option value="1">1 — Normal</option>
+            <option value="2">2 — High</option>
+          </select>
+        </label>
+        <label>Created by<input name="created_by" placeholder="your name" /></label>
+      </div>
+      <p id="createError" class="form-error hidden"></p>
+      <footer>
+        <button type="button" class="btn btn-ghost" data-close="createDialog">Cancel</button>
+        <button type="submit" class="btn btn-primary" id="createSubmit">Create</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <!-- Bulk upload -->
+  <dialog id="bulkDialog" class="modal">
+    <form method="dialog" id="bulkForm">
+      <header>
+        <h2>Bulk CSV upload</h2>
+        <button type="button" class="icon-close" data-close="bulkDialog" aria-label="Close">&times;</button>
+      </header>
+      <p class="hint">
+        Headers: <code>keyword,language,location,priority</code> · max 100 tasks / batch · invalid rows returned, not queued
+      </p>
+      <label class="file-drop">
+        <input type="file" id="csvFile" accept=".csv,text/csv" required />
+        <span>Choose CSV file</span>
+      </label>
+      <p id="bulkError" class="form-error hidden"></p>
+      <div id="bulkResult" class="bulk-result hidden"></div>
+      <footer>
+        <button type="button" class="btn btn-ghost" data-close="bulkDialog">Close</button>
+        <button type="submit" class="btn btn-primary" id="bulkSubmit">Upload &amp; queue</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>
