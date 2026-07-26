@@ -12,6 +12,7 @@ const ApiError = require('../utils/ApiError');
  * Filtering / sorting / pagination all happen server-side.
  */
 class DashboardService {
+  //Creates a service method that receives all query parameters.
   async listTasks(query) {
     const {
       page = DEFAULT_PAGE,
@@ -61,7 +62,7 @@ class DashboardService {
     }
     return task;
   }
-
+//This defines a private method(#)
   #buildFilter({ search, status, priority, language, location }) {
     const filter = {};
 
@@ -69,8 +70,8 @@ class DashboardService {
       const q = String(search).trim();
       // Prefer text index when available; regex fallback covers task_id / partials
       filter.$or = [
-        { keyword: { $regex: escapeRegex(q), $options: 'i' } },
-        { task_id: { $regex: escapeRegex(q), $options: 'i' } },
+        { keyword: { $regex: escapeRegex(q), $options: 'i' } },//$options: 'i'means - Case-insensitive
+        { task_id: { $regex: escapeRegex(q), $options: 'i' } },//escapeRegex() converts special characters(.) into literals so the search behaves as users expect.
         { language_code: { $regex: escapeRegex(q), $options: 'i' } },
       ];
     }
@@ -115,7 +116,7 @@ class DashboardService {
     const list = String(columns)
       .split(',')
       .map((c) => c.trim())
-      .filter(Boolean);
+      .filter(Boolean);//Removes empty values.
 
     if (!list.length) return undefined;
 

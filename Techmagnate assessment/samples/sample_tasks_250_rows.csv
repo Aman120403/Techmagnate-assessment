@@ -1,0 +1,251 @@
+Keyword,Language,Location,Priority
+mongodb 1,en,2036,1
+python 2,fr,2840,1
+aws 3,es,2840,1
+node js 4,fr,2826,1
+kubernetes 5,fr,21167,2
+python 6,es,21167,2
+iphone 7,fr,2250,2
+java 8,fr,2826,2
+mongodb 9,en,2250,1
+smartwatch 10,de,21167,2
+laptop 11,es,21167,1
+gaming 12,en,21167,2
+travel 13,de,21167,1
+node js 14,en,2826,2
+node js 15,fr,2840,2
+java 16,es,2036,1
+smartwatch 17,de,2826,2
+node js 18,it,2826,1
+seo 19,es,2250,2
+kubernetes 20,fr,2036,1
+python 21,en,2036,2
+java 22,en,2826,2
+digital marketing 23,es,2250,2
+react 24,de,2826,1
+kubernetes 25,it,2036,2
+aws 26,es,2036,1
+react 27,it,2250,1
+laptop 28,en,2826,1
+ai 29,it,2840,2
+gaming 30,it,2250,2
+kubernetes 31,en,2840,2
+headphones 32,en,2036,2
+seo 33,es,2840,2
+docker 34,fr,21167,1
+camera 35,it,21167,1
+react 36,de,2826,1
+travel 37,de,2250,1
+mongodb 38,de,2036,1
+laptop 39,fr,21167,1
+node js 40,es,2840,1
+react 41,es,21167,1
+java 42,it,21167,2
+digital marketing 43,it,2826,2
+gaming 44,de,2250,2
+mongodb 45,fr,2826,1
+headphones 46,en,21167,1
+aws 47,fr,2840,1
+laptop 48,fr,2840,1
+headphones 49,en,21167,1
+java 50,es,2826,1
+aws 51,it,2250,1
+cloud 52,es,2826,1
+mongodb 53,es,2036,2
+ai 54,es,2840,1
+laptop 55,es,2036,1
+python 56,fr,2826,2
+react 57,es,2826,2
+machine learning 58,fr,2840,2
+kubernetes 59,en,2840,1
+node js 60,fr,2826,2
+cloud 61,es,2826,2
+laptop 62,fr,2250,1
+gaming 63,de,2250,2
+ai 64,it,2250,1
+digital marketing 65,de,2826,1
+aws 66,it,2840,2
+laptop 67,en,21167,2
+docker 68,it,2826,1
+docker 69,en,2826,1
+travel 70,en,2826,2
+mongodb 71,it,2826,1
+travel 72,en,2250,2
+java 73,fr,2036,1
+java 74,es,2826,2
+machine learning 75,de,2840,1
+machine learning 76,it,21167,1
+node js 77,it,2826,2
+react 78,de,2840,1
+smartwatch 79,de,2826,2
+kubernetes 80,de,21167,1
+kubernetes 81,de,2840,1
+java 82,en,2840,1
+java 83,de,21167,1
+headphones 84,fr,2036,2
+java 85,en,2840,2
+java 86,en,2840,2
+react 87,de,2826,2
+kubernetes 88,es,21167,1
+mongodb 89,en,2826,1
+smartwatch 90,it,21167,1
+ai 91,fr,2840,2
+smartwatch 92,en,2036,1
+python 93,en,2036,2
+travel 94,fr,2826,1
+seo 95,es,2840,1
+headphones 96,es,2826,2
+seo 97,en,2250,1
+cloud 98,fr,2826,2
+smartwatch 99,de,2826,1
+iphone 100,fr,2250,2
+java 101,en,2036,2
+docker 102,es,21167,2
+iphone 103,en,2036,1
+aws 104,de,2840,1
+travel 105,es,2036,2
+ai 106,it,21167,1
+gaming 107,it,2826,2
+laptop 108,es,2840,1
+smartwatch 109,es,2840,2
+travel 110,de,2840,2
+docker 111,de,2250,2
+gaming 112,de,21167,1
+digital marketing 113,es,2250,1
+travel 114,it,2036,2
+kubernetes 115,en,2036,2
+digital marketing 116,es,21167,2
+machine learning 117,es,2250,1
+docker 118,es,2826,1
+camera 119,it,21167,2
+node js 120,fr,2036,1
+digital marketing 121,fr,2840,1
+python 122,es,21167,1
+machine learning 123,es,21167,1
+gaming 124,es,2250,1
+react 125,en,2840,2
+python 126,fr,21167,2
+laptop 127,it,2826,1
+machine learning 128,fr,2250,2
+machine learning 129,it,21167,2
+kubernetes 130,es,2826,2
+machine learning 131,de,2826,2
+docker 132,es,2826,2
+machine learning 133,en,2036,1
+java 134,de,2036,1
+react 135,fr,2826,2
+react 136,fr,2840,2
+ai 137,de,21167,2
+ai 138,en,2826,2
+gaming 139,it,2840,2
+cloud 140,en,2036,2
+gaming 141,es,21167,1
+cloud 142,fr,2036,2
+cloud 143,en,2250,2
+gaming 144,fr,2250,1
+travel 145,it,2840,2
+aws 146,it,2840,1
+ai 147,fr,2250,1
+laptop 148,de,2250,2
+digital marketing 149,es,2036,2
+gaming 150,de,2250,2
+node js 151,es,2840,1
+smartwatch 152,fr,2840,1
+iphone 153,fr,2826,1
+travel 154,fr,2826,1
+cloud 155,en,21167,1
+machine learning 156,de,2036,1
+travel 157,it,2840,1
+camera 158,en,21167,1
+camera 159,it,2250,2
+digital marketing 160,en,21167,1
+mongodb 161,de,21167,1
+aws 162,en,2036,2
+smartwatch 163,en,21167,2
+iphone 164,es,2250,1
+ai 165,de,2250,1
+ai 166,fr,21167,2
+travel 167,it,2250,2
+ai 168,it,2036,2
+python 169,en,2036,2
+python 170,es,21167,2
+headphones 171,en,2250,2
+seo 172,es,2826,2
+java 173,de,2036,2
+kubernetes 174,en,21167,1
+node js 175,fr,2250,2
+kubernetes 176,fr,2250,2
+machine learning 177,en,2840,2
+python 178,es,2826,2
+aws 179,de,2250,2
+ai 180,it,2036,2
+machine learning 181,de,2036,2
+python 182,en,2826,2
+mongodb 183,it,2826,1
+digital marketing 184,es,2036,2
+mongodb 185,fr,2036,1
+smartwatch 186,fr,2036,1
+kubernetes 187,fr,2036,1
+laptop 188,it,2036,1
+cloud 189,en,2840,2
+cloud 190,es,2250,2
+seo 191,en,2036,2
+mongodb 192,en,2250,2
+node js 193,it,2840,1
+react 194,it,2036,1
+python 195,en,21167,2
+travel 196,it,21167,1
+docker 197,es,2250,2
+camera 198,it,2250,2
+aws 199,it,2840,1
+digital marketing 200,fr,2036,1
+seo 201,fr,2826,1
+seo 202,en,2250,2
+travel 203,es,2036,1
+python 204,de,2036,2
+node js 205,fr,2036,1
+ai 206,en,21167,1
+react 207,de,2826,1
+laptop 208,fr,2036,2
+machine learning 209,en,2250,2
+gaming 210,de,21167,2
+machine learning 211,en,21167,1
+ai 212,de,21167,2
+iphone 213,en,2826,1
+java 214,it,2840,1
+cloud 215,it,2250,2
+seo 216,it,2250,2
+node js 217,es,2036,2
+headphones 218,de,2840,1
+headphones 219,es,2250,2
+gaming 220,it,2840,2
+node js 221,de,2036,2
+mongodb 222,es,21167,1
+kubernetes 223,es,2250,1
+digital marketing 224,it,2036,2
+machine learning 225,en,2826,2
+kubernetes 226,fr,2036,2
+cloud 227,en,2840,1
+seo 228,de,21167,1
+kubernetes 229,es,2840,1
+mongodb 230,es,2840,1
+cloud 231,de,21167,2
+ai 232,es,2250,1
+machine learning 233,it,2826,2
+digital marketing 234,it,21167,1
+node js 235,de,2250,2
+docker 236,de,2840,2
+camera 237,it,21167,2
+react 238,es,21167,2
+smartwatch 239,de,21167,2
+machine learning 240,de,2826,1
+aws 241,es,2826,2
+laptop 242,de,2250,2
+gaming 243,fr,2250,1
+react 244,it,21167,2
+mongodb 245,es,2840,2
+iphone 246,fr,2250,1
+node js 247,es,2036,2
+travel 248,es,2840,2
+kubernetes 249,es,2036,2
+kubernetes 250,en,21167,1

@@ -23,6 +23,7 @@ function parseAndValidateCsv(buffer) {
   const firstLine = text.split(/\r?\n/).find((l) => l.trim()) || '';
   const delimiter = firstLine.includes(';') && !firstLine.includes(',') ? ';' : ',';
 
+  //convert csv into javaScript objects
   let records;
   try {
     records = parse(text, {
@@ -33,9 +34,9 @@ function parseAndValidateCsv(buffer) {
             .trim()
             .toLowerCase()
         ),
-      skip_empty_lines: true,
-      trim: true,
-      relax_column_count: true,
+      skip_empty_lines: true,  //Ignore blank rows
+      trim: true,               // remove spaces
+      relax_column_count: true,  // Allows rows with diffrent numbers of columns
       bom: true,
       delimiter,
       relax_quotes: true,
@@ -43,11 +44,11 @@ function parseAndValidateCsv(buffer) {
   } catch (err) {
     throw new ApiError(400, `CSV parse error: ${err.message}`);
   }
-
+//Check if only headers exist.
   if (!records.length) {
     throw new ApiError(400, 'CSV has headers but no data rows');
   }
-
+//Get headers
   const keys = Object.keys(records[0] || {});
   const missingHeaders = REQUIRED_HEADERS.filter((h) => !keys.includes(h));
   if (missingHeaders.length) {

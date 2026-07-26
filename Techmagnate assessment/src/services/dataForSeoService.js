@@ -94,7 +94,7 @@ class DataForSeoService {
     }
   }
 
-  /**
+  /** 
    * Only fields documented for Live Advanced.
    * `priority` is our app field — NOT sent upstream (that's a Task POST concept).
    */
@@ -121,7 +121,6 @@ class DataForSeoService {
       );
     }
   }
-
   /**
    * Persist mapping per module requirements.
    * Source of truth for task meta: response.tasks[0]

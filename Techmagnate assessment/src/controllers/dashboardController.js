@@ -9,6 +9,8 @@ const dashboardService = require('../services/dashboardService');
  *   page, limit, search, status, priority, language, location,
  *   sortBy, sortOrder, columns
  */
+
+//fetch tasks from MongoDB with filtering, searching, sorting, pagination, and column selection.
 const listTasks = asyncHandler(async (req, res) => {
   const result = await dashboardService.listTasks(req.query);
 
