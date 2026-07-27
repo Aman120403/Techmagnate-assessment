@@ -41,15 +41,18 @@ const createBulk = asyncHandler(async (req, res) => {
   if (!req.file) {
     throw new ApiError(400, 'CSV file is required (field name: file)');
   }
-
+  
   const { valid, invalid, totalRows } = parseAndValidateCsv(req.file.buffer);
 
   let enqueueResult = null;
   if (valid.length) {
     const createdBy = req.body.created_by || req.headers['x-user'] || 'bulk-upload';
+    //Calling enqueueBulk()
     enqueueResult = await taskService.enqueueBulk(valid, createdBy);
   }
 
+  //sending the final response back to the client after the CSV has been processed
+  //it also provides an endpoint to check the queue status.
   res.status(acceptedStatus(valid, invalid)).json({
     success: true,
     message: buildBulkMessage(valid, invalid),
@@ -74,6 +77,7 @@ const createBulk = asyncHandler(async (req, res) => {
   });
 });
 
+//Creates an API endpoint like:
 const queueStatus = asyncHandler(async (_req, res) => {
   res.json({
     success: true,
